@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Attendance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>Employee Attendance</h1>
+      <p>Attendance Dashboard for HR Management</p>
+    </header>
+
+    <main class="dashboard">
+      <section class="card form-card">
+        <h2>Employee Attendance Form</h2>
+        <form id="attendanceForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="employeeId">Employee ID</label>
+              <input type="text" id="employeeId" placeholder="Enter employee ID" />
+            </div>
+
+            <div class="field">
+              <label for="employeeName">Employee Name</label>
+              <input type="text" id="employeeName" placeholder="Enter employee name" />
+            </div>
+
+            <div class="field">
+              <label for="department">Department</label>
+              <select id="department">
+                <option value="">Select Department</option>
+                <option>HR</option>
+                <option>IT</option>
+                <option>Finance</option>
+                <option>Sales</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="workingDays">Working Days</label>
+              <input type="number" id="workingDays" min="1" placeholder="Enter working days" />
+            </div>
+
+            <div class="field">
+              <label for="presentDays">Present Days</label>
+              <input type="number" id="presentDays" min="0" placeholder="Enter present days" />
+            </div>
+
+            <div class="field">
+              <label for="leaveDays">Leave Days</label>
+              <input type="number" id="leaveDays" min="0" placeholder="Enter leave days" />
+            </div>
+          </div>
+
+          <button type="submit">Submit Attendance</button>
+        </form>
+      </section>
+
+      <section class="card report-card">
+        <h2>Attendance Report</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Department</th>
+                <th>Working Days</th>
+                <th>Present Days</th>
+                <th>Leave Days</th>
+                <th>Attendance %</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="attendanceTableBody">
+              <tr>
+                <td>100</td>
+                <td>Nikash</td>
+                <td>IT</td>
+                <td>22</td>
+                <td>20</td>
+                <td>2</td>
+                <td>90.91%</td>
+                <td><span class="status-badge excellent">Excellent</span></td>
+              </tr>
+              <tr>
+                <td>101</td>
+                <td>Gokul</td>
+                <td>HR</td>
+                <td>22</td>
+                <td>21</td>
+                <td>1</td>
+                <td>95.45%</td>
+                <td><span class="status-badge excellent">Excellent</span></td>
+              </tr>
+              <tr>
+                <td>102</td>
+                <td>Suriya</td>
+                <td>Finance</td>
+                <td>22</td>
+                <td>19</td>
+                <td>3</td>
+                <td>86.36%</td>
+                <td><span class="status-badge good">Good</span></td>
+              </tr>
+              <tr>
+                <td>103</td>
+                <td>Sanjeev</td>
+                <td>Sales</td>
+                <td>22</td>
+                <td>22</td>
+                <td>0</td>
+                <td>100%</td>
+                <td><span class="status-badge excellent">Excellent</span></td>
+              </tr>
+              <tr>
+                <td>104</td>
+                <td>Praveen Kanth</td>
+                <td>IT</td>
+                <td>22</td>
+                <td>18</td>
+                <td>4</td>
+                <td>81.82%</td>
+                <td><span class="status-badge good">Good</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="emp.js"></script>
+</body>
+</html>
